@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DevExpress.Xpo;
+using Gestor_Productos.Database;
+using Gestor_Productos.Database.ORM_GestProc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,18 @@ namespace Gestor_Productos
         public MainWindow()
         {
             InitializeComponent();
+            string conexionString = ConexionBBDD.CrearStringConexion("PORTATIL-MARIO", "BD_GESTPROC", "sa", "root");
+            IDataLayer datalayer = ConexionBBDD.CrearConexion(conexionString, DevExpress.Xpo.DB.AutoCreateOption.DatabaseAndSchema);
+
+            UnitOfWork uow = ConexionBBDD.getNewUnitOfWork();
+            XPCollection<USUARIOS> users = new XPCollection<USUARIOS>(uow);
+            USUARIOS u = new USUARIOS(uow);
+            u.Nombre = "hiuhihi";
+            u.Username = "pppppp";
+            uow.CommitChanges();
+
+            UnitOfWork uow2 = new UnitOfWork();
+            XPCollection<USUARIOS> users2 = new XPCollection<USUARIOS>(uow);
         }
     }
 }

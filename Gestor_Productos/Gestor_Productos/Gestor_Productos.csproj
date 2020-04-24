@@ -38,6 +38,7 @@
     <Reference Include="DevExpress.Data.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +66,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Database\ConexionBBDD.cs" />
     <Compile Include="Database\ORM_GestProcCode\CLIENTES.cs" />
     <Compile Include="Database\ORM_GestProcCode\CLIENTES.Designer.cs">
       <DependentUpon>CLIENTES.cs</DependentUpon>
@@ -77,6 +79,7 @@
     <Compile Include="Database\ORM_GestProcCode\CONFIGURACION.Designer.cs">
       <DependentUpon>CONFIGURACION.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\ORM_GestProcCode\ConnectionHelper.cs" />
     <Compile Include="Database\ORM_GestProcCode\FAMILIAS.cs" />
     <Compile Include="Database\ORM_GestProcCode\FAMILIAS.Designer.cs">
       <DependentUpon>FAMILIAS.cs</DependentUpon>
@@ -131,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Comun\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
