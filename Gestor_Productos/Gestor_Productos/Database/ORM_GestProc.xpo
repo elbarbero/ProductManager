@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="83b45ddb-92c7-4243-bf9c-31d8105c3608" namespace="Gestor_Productos.Database.ORM_GestProc" dataBaseShemaInfo="H4sIAAAAAAAEAN1ZXU9bORB9r9T/EPFcJ/7+qEIqGtoKtVAEpdrXsT2Gq01u0L0JsP9+55KUFmh3WTVKxL7F43Hs4xnPnJMM39xMJ70rbNpqVu/uiD7feTN6+WL4Flo8nc8aOMeDusx65FW3r2/aanfnYj6/fD0YXF9f969Vf9acDyTnYvDH4afTdIFTYFXdzqFOuHO3Kv/7qh3atdcbfoE4wbbb8nb8zfKD4ZvpCKY4Ojs92zs5+Hw6HHy33bm9qzvbaN4scDhYDe4m96u2M5xdZpjjqMCkJaf7xjvfD4sqH+SRjcX5wCULzgamk0UWuSwMudTgUEQr83Cwcr5bPJ5NFtO6vYfgl2aa6DAsJ0cH9HU/DO+5/RO4/wrwR5BSc0wyaoKmkWmQmXmZPFOKRx013UGJj0DS8sFv4DyaTWODm8faYSmWwAXHM9NGOEbhdQyywBBTiEbrdWM9a7Gpabh5tEZbITxXzGnJmZaK0AIPTDoughNSJLV2tMfQttezZgt5bKTSGqEwEMFTbF1iwB09W1Ayg9cWgnky2p9ZVyXnyaXq+OTz/tn4y4ZqVRJK0lN2THNuCLTPDIrTTFtlY1RZyZKefa1KUhjpJbCsPMXYanrJgDSkGiatVTGB/7/UKqGACnBSLBgRmfY5sQhZMSmlydkF77JbN9b3MK0mFWwBLPjiAkcWtKCcFUoz7yh7SxAmc+0SpLWXqkNo0hagmqi49tR+FBiqTiYoFlPKVKSFUd0UBrFuqPvYpqa6TET5tvBoXZQCi2CyCEmVKQcGyWRmc6ZMBpTO8rUDns+2AFS5IKXKLKpI7CLrxHzBwFDoyIUG4bNae7/FdgtIQ+HJRONYsd51nNEwrwwwcBDRmuCUXHsOn9VVhozt5tFqaZVXxBVTjNR1vLHMU09lSXnnTSBKGR631t+Na4P0Wr9iPd9CiQIvg07Ei10oighFtiwka5hF7RVJBUx+7eFdAh7PppfNNvqPiTy4KJhxhUIskTpRVoIJGWUsGJ2JZf3CYAFNtYXXWwQUjgJZliRmSdZyCi9IkrXGQrGuOPt0xbcOpny4dzLe2wxNLkFRFY7AKLBUuYQVpAW9ZMlwD57rKAI+e5pM9UhwE0nNa5J7WiGxKSUCK15rXYyy2jwG+UxpMi/KyBg4NV3qR5o0AQtBZJYKqiCKArqLjSbz+73Dg08HG0pnG0GQuqVqJTsyGTMyiAGId2SjUQqt5GPK8dzSWetMms8rhiF2Ssh5RkATM0LERAHPUaxdCW1N9ekghETDuFWcaQRqvSpa0vImWcnpXcPTn+5T0nk1/u4y7H4FxnzczNKtsTdYmr8ufzImLXH17uaywbbt78Mc+lci9OWr3mp6txv1VZ+/6o0Xk/miwd0aF/MGJq96x4s4qdJH/OvL7E+sd6P3WTijs+McdaCu/22L2/3GE2hbbLsAnCzubne4l+loWKqb1bmWptNFuWc6wensCh86Lq0PfcfQIrHLdAH1OVJ6346XV/OzMwzpZi6xmVdbPtsvjjH8gDU2lF5EpaZEH9tVjj4y33MmgVid08f3FaXCgxX3526XHS0mky5r3uIFXFWzhpKiAIWb3svDmZcvhoMH/y2M/gZAeUk9hBgAAA==" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" useNameOf="true" createdInVersion="19.2.3.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="19.2.3.0" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="83b45ddb-92c7-4243-bf9c-31d8105c3608" namespace="Gestor_Productos.Database.ORM_GestProc" dataBaseShemaInfo="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" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" useNameOf="true" createdInVersion="19.2.3.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="19.2.3.0" name="ORM_GestProc" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
   <classes>
     <dataBaseObjectModelHasClasses Id="0e5e5f64-5e41-4ff8-8b7c-36de90b0f848">
       <xpObject Id="6bf78902-9769-4c6e-b02f-e024a7e1b62d" name="USUARIOS" baseClass="XPBaseObject" userFileName="USUARIOS" designerFileName="USUARIOS.Designer" className="USUARIOS" virtualBaseClass="XPBaseObject" virtualName="USUARIOS">
@@ -18,13 +18,16 @@
           </generalXpObjectHasFields>
         </fields>
         <saTargets>
-          <simpleAssociation Id="f1010f7e-8e04-4ac9-8c9a-a9b88a970642" sourceCollectionName="PRODUCTOSCollection" name="PRODUCTOSReferencesUSUARIOS" targetFieldName="Usuario">
-            <xpObjectMoniker Id="c1322407-4005-4a8d-af74-4636bb3d32fc" />
+          <simpleAssociation Id="79a191af-02c9-43c2-a234-bcb3cef4c4ad" sourceCollectionName="CONFIGURACIONs" name="CONFIGURACIONReferencesUSUARIOS" targetFieldName="Usuario">
+            <xpObjectMoniker Id="56bd2835-a0e7-4943-9fc1-b6a88b293596" />
           </simpleAssociation>
         </saTargets>
         <collectionFields>
-          <xpObjectHasCollectionFields Id="39f1bb94-d18f-4034-a55d-5e6c22b94954">
-            <collectionField Id="463bca5a-a7cb-40ac-8e37-b654fde417fe" name="PRODUCTOSCollection" />
+          <xpObjectHasCollectionFields Id="a2973f0b-9ae7-4c79-bbdf-779158d0edf3">
+            <collectionField Id="b5343914-ae93-409e-8771-106a1a32f712" name="PRODUCTOSCollection" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="4371a7a7-9a75-46d8-a80a-ad9a1d3890a7">
+            <collectionField Id="ac6fc5b3-2fb2-4f44-be45-dfcf0bd90d01" name="CONFIGURACIONs" />
           </xpObjectHasCollectionFields>
         </collectionFields>
       </xpObject>
@@ -62,10 +65,17 @@
           <generalXpObjectHasFields Id="af93fe84-8d60-4ee9-b371-2ff3e483ddf8">
             <field Id="15b097b1-57f8-42ee-9d31-12b2bfeb75bf" name="PrecioCompra" columnType="Decimal" virtualColumnType="Decimal" dbType="decimal(10,4)" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="c23f8f0b-8ee4-4b3a-9bc1-0cf2fbf1cd5e">
-            <field Id="f1af0e1e-d22f-4c60-9ca2-e056af67f76b" name="Usuario" virtualColumnType="USUARIOS" logicalType="USUARIOS" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
         </fields>
+        <mMTarget>
+          <manyToManyRelationship Id="173d4dcb-6883-42ca-9178-87dbbe78ccc5" sourceCollectionName="USUARIOSCollection" name="USUARIOSReferencesPRODUCTOS" targetCollectionName="PRODUCTOSCollection">
+            <xpObjectMoniker Id="6bf78902-9769-4c6e-b02f-e024a7e1b62d" />
+          </manyToManyRelationship>
+        </mMTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="b1b32647-50f9-440f-9018-e59bf71c1869">
+            <collectionField Id="918e5a21-d6e0-488c-9d68-c3c9bfddbb96" name="USUARIOSCollection" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
       </xpObject>
     </dataBaseObjectModelHasClasses>
     <dataBaseObjectModelHasClasses Id="0aa707d3-d2d1-4060-8b92-7c937ecc5a5b">
@@ -110,6 +120,54 @@
             <collectionField Id="45d94d1a-2f67-479a-ae56-35bf3ab2ab9b" name="PRODUCTOSCollection" />
           </xpObjectHasCollectionFields>
         </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="520792cb-e83e-4cab-a241-2b8bb1aaf6fc">
+      <xpObject Id="eabb2e9f-1443-4a53-a5d9-816cb58fc23c" name="CLIENTES" baseClass="XPBaseObject" userFileName="CLIENTES" designerFileName="CLIENTES.Designer" className="CLIENTES" virtualBaseClass="XPBaseObject" virtualName="CLIENTES">
+        <fields>
+          <generalXpObjectHasFields Id="c313e18e-378c-4d61-a1b1-d48dce07d4c9">
+            <field Id="7d1648ae-0ed6-447c-b704-7b90b2424473" name="Id" columnType="Int32" key="true" isIdentity="true" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c69cab53-7890-49e9-92b0-8ae32006da19">
+            <field Id="7b0acf3f-f005-4d42-afb2-c3c7c95579ef" name="Nombre" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="94c58dfe-623f-46d7-8ab2-4061bf11e7d4">
+            <field Id="34696836-989c-4298-b895-7abae76d3818" name="Apellidos" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="150" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="01dfee07-f43d-4cc1-b463-768cf7e05522">
+      <xpObject Id="56bd2835-a0e7-4943-9fc1-b6a88b293596" name="CONFIGURACION" baseClass="XPBaseObject" userFileName="CONFIGURACION" designerFileName="CONFIGURACION.Designer" className="CONFIGURACION" virtualBaseClass="XPBaseObject" virtualName="CONFIGURACION">
+        <fields>
+          <generalXpObjectHasFields Id="2805d89a-0aab-46cf-a454-8bc2584eef55">
+            <field Id="072ca0bd-1c6c-4523-9055-c7e5629b9af8" name="Id" columnType="Int32" key="true" isIdentity="true" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="af4203cb-940f-4cd9-958f-812d2509fb17">
+            <field Id="b6eac15c-1f16-42ba-af64-dc5d5c85a444" name="Usuario" virtualColumnType="USUARIOS" logicalType="USUARIOS" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e655200a-a57b-4927-8edc-71c9c094b406">
+            <field Id="31a72fbd-f10d-4648-831a-a682a012f244" name="UtilizaIVA" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" defaultValue="Boolean#False" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="57cf360a-16f8-4c30-9a51-d98f325f47e3">
+      <xpObject Id="29a102bb-2e11-4753-9aa3-409649ed8205" name="COMPRAS" baseClass="XPBaseObject" userFileName="COMPRAS" designerFileName="COMPRAS.Designer" className="COMPRAS" virtualBaseClass="XPBaseObject" virtualName="COMPRAS">
+        <fields>
+          <generalXpObjectHasFields Id="267718b9-6ae3-4674-930e-15d237bf737f">
+            <field Id="be94f1c9-9ae3-4a1a-afed-6dbfbe196343" name="Id" columnType="Int64" key="true" isIdentity="true" virtualColumnType="Int64" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="d930c77f-00da-4d2f-a862-5762c7afcee4">
+      <xpObject Id="db619a17-11a2-456e-a719-1f33d5663b34" name="VENTAS" baseClass="XPBaseObject" userFileName="VENTAS" designerFileName="VENTAS.Designer" className="VENTAS" virtualBaseClass="XPBaseObject" virtualName="VENTAS">
+        <fields>
+          <generalXpObjectHasFields Id="bbcf81bf-5df6-4612-9ea0-e98220251c3f">
+            <field Id="f88e1aa8-5beb-44ef-8d40-5da7bc62f036" name="Field1" columnType="Int64" key="true" isIdentity="true" virtualColumnType="Int64" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
       </xpObject>
     </dataBaseObjectModelHasClasses>
   </classes>

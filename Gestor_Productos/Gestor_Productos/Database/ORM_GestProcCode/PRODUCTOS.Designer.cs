@@ -86,13 +86,8 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fPrecioCompra; }
             set { SetPropertyValue<decimal>(nameof(PrecioCompra), ref fPrecioCompra, value); }
         }
-        USUARIOS fUsuario;
-        [Association(@"PRODUCTOSReferencesUSUARIOS")]
-        public USUARIOS Usuario
-        {
-            get { return fUsuario; }
-            set { SetPropertyValue<USUARIOS>(nameof(Usuario), ref fUsuario, value); }
-        }
+        [Association(@"USUARIOSReferencesPRODUCTOS")]
+        public XPCollection<USUARIOS> USUARIOSCollection { get { return GetCollection<USUARIOS>(nameof(USUARIOSCollection)); } }
     }
 
 }

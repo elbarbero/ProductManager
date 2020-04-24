@@ -65,6 +65,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Database\ORM_GestProcCode\CLIENTES.cs" />
+    <Compile Include="Database\ORM_GestProcCode\CLIENTES.Designer.cs">
+      <DependentUpon>CLIENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORM_GestProcCode\COMPRAS.cs" />
+    <Compile Include="Database\ORM_GestProcCode\COMPRAS.Designer.cs">
+      <DependentUpon>COMPRAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORM_GestProcCode\CONFIGURACION.cs" />
+    <Compile Include="Database\ORM_GestProcCode\CONFIGURACION.Designer.cs">
+      <DependentUpon>CONFIGURACION.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\ORM_GestProcCode\FAMILIAS.cs" />
     <Compile Include="Database\ORM_GestProcCode\FAMILIAS.Designer.cs">
       <DependentUpon>FAMILIAS.cs</DependentUpon>
@@ -80,6 +92,10 @@
     <Compile Include="Database\ORM_GestProcCode\USUARIOS.cs" />
     <Compile Include="Database\ORM_GestProcCode\USUARIOS.Designer.cs">
       <DependentUpon>USUARIOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORM_GestProcCode\VENTAS.cs" />
+    <Compile Include="Database\ORM_GestProcCode\VENTAS.Designer.cs">
+      <DependentUpon>VENTAS.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

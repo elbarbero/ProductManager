@@ -44,8 +44,10 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fPassword; }
             set { SetPropertyValue<string>(nameof(Password), ref fPassword, value); }
         }
-        [Association(@"PRODUCTOSReferencesUSUARIOS")]
+        [Association(@"USUARIOSReferencesPRODUCTOS")]
         public XPCollection<PRODUCTOS> PRODUCTOSCollection { get { return GetCollection<PRODUCTOS>(nameof(PRODUCTOSCollection)); } }
+        [Association(@"CONFIGURACIONReferencesUSUARIOS")]
+        public XPCollection<CONFIGURACION> CONFIGURACIONs { get { return GetCollection<CONFIGURACION>(nameof(CONFIGURACIONs)); } }
     }
 
 }
