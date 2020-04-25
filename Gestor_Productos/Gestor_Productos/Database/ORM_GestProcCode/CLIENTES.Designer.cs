@@ -38,6 +38,33 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fApellidos; }
             set { SetPropertyValue<string>(nameof(Apellidos), ref fApellidos, value); }
         }
+        string fDNI;
+        [Size(12)]
+        public string DNI
+        {
+            get { return fDNI; }
+            set { SetPropertyValue<string>(nameof(DNI), ref fDNI, value); }
+        }
+        string fTlfFijo;
+        [Size(9)]
+        public string TlfFijo
+        {
+            get { return fTlfFijo; }
+            set { SetPropertyValue<string>(nameof(TlfFijo), ref fTlfFijo, value); }
+        }
+        string fTlfMovil;
+        [Size(9)]
+        public string TlfMovil
+        {
+            get { return fTlfMovil; }
+            set { SetPropertyValue<string>(nameof(TlfMovil), ref fTlfMovil, value); }
+        }
+        string fEmail;
+        public string Email
+        {
+            get { return fEmail; }
+            set { SetPropertyValue<string>(nameof(Email), ref fEmail, value); }
+        }
     }
 
 }

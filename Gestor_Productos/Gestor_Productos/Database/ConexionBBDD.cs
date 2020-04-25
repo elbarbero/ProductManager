@@ -13,11 +13,9 @@ namespace Gestor_Productos.Database
     class ConexionBBDD
     {
         public static IDataLayer datalayer;
-        public static UnitOfWork getNewUnitOfWork()
-        {
-            return new UnitOfWork(datalayer);
-        }
-
+        public static UnitOfWork getNewUnitOfWork() => new UnitOfWork(datalayer);
+        
+        
         public static string CrearStringConexion(string direccionBBDD, string nombreDB, string usuarioBBDD, string passwordBBDD)
         {
             string sqlConn;
@@ -38,7 +36,7 @@ namespace Gestor_Productos.Database
             }
         }
 
-        public static bool CrearDataBase(string stringConexion, DevExpress.Xpo.DB.AutoCreateOption option)
+        public static bool CrearDataBase(string stringConexion, DevExpress.Xpo.DB.AutoCreateOption option) // Crea o Actualiza la BBDD
         {
             try
             {

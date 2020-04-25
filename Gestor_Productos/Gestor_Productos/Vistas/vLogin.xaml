@@ -1,0 +1,44 @@
+﻿<dx:ThemedWindow xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+    x:Class="Gestor_Productos.Vistas.vLogin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    Title="vLogin" Height="500" Width="500" WindowState="Normal" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <dxlc:LayoutGroup Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <dxe:ImageEdit x:Name="Image" Stretch="Uniform" Source="../Recursos/Abejas.png" ShowMenu="False" ShowBorder="False"/>
+        </dxlc:LayoutGroup>
+
+        <dxlc:LayoutGroup Grid.Row="1" Grid.ColumnSpan="2" Orientation="Vertical">
+            <dxlc:LayoutItem Label="Inicio de sesión" HorizontalAlignment="Center" Margin="0,10,0,0" FontSize="18" FontWeight="Bold" Foreground="#073B3A"/>
+            <dxlc:LayoutItem HorizontalAlignment="Center" Label="Usuario" LabelPosition="Top" Width="300" Margin="0,15,0,0">
+                <dxe:TextEdit x:Name="txtUsuario" EditValue="{DXBinding usuario, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </dxlc:LayoutItem>
+            <dxlc:LayoutItem HorizontalAlignment="Center" Label="Contraseña" LabelPosition="Top" Width="300" Margin="0,15,0,10">
+                <dxe:PasswordBoxEdit x:Name="txtContraseña" EditValue="{DXBinding contrasena, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{DXBinding 'usuario == null ? `False`: `True`'}"/>
+            </dxlc:LayoutItem>
+        </dxlc:LayoutGroup>
+
+        <dxlc:LayoutGroup Grid.Row="2" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalAlignment="Center">
+            <dx:SimpleButton x:Name="btnAceptar" Content="Siguiente" Width="150" IsEnabled="{DXBinding Expr= 'contrasena != null and contrasena.Length > 4? `True` : `False`', FallbackValue='False'}"/>
+        </dxlc:LayoutGroup>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,15" Foreground="#D5DE40" FontSize="13" FontWeight="Bold" Text="Registrarse" TextDecorations="Underline" Cursor="Hand"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,15" Foreground="#D5DE40" FontSize="13" FontWeight="Bold" Text="¿Has olvidado la contraseña?" TextDecorations="Underline" Cursor="Hand"/>
+
+    </Grid>
+</dx:ThemedWindow>
