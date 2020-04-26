@@ -1,0 +1,48 @@
+﻿<dx:ThemedWindow x:Class="Gestor_Productos.Vistas.vRegistroRecuperacion" mc:Ignorable="d" Title="Registro" WindowStartupLocation="CenterScreen" 
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:local="clr-namespace:Gestor_Productos.Vistas"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <dxlc:LayoutItem Label="Registro" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,10,0,0" FontSize="18" FontWeight="Bold" Foreground="#073B3A"/>
+        <dxlc:LayoutGroup Orientation="Vertical" Grid.Row="1" ItemLabelsAlignment="Local">
+            <dxlc:LayoutItem HorizontalAlignment="Left" Label="Nombre" Width="300" Margin="30,15,0,0">
+                <dxe:TextEdit x:Name="txtUsuario"/>
+            </dxlc:LayoutItem>
+            <dxlc:LayoutItem HorizontalAlignment="Left" Label="Apellido" Width="300" Margin="30,15,0,0">
+                <dxe:TextEdit x:Name="txtContraseña"/>
+            </dxlc:LayoutItem>
+            <dxlc:LayoutItem HorizontalAlignment="Left" Label="DNI" Width="200" Margin="30,15,0,0">
+                <dxe:TextEdit x:Name="txtDNI" />
+            </dxlc:LayoutItem>
+        </dxlc:LayoutGroup>
+
+        <dxlc:LayoutGroup Orientation="Vertical" Grid.Row="1" Grid.Column="1" ItemLabelsAlignment="Local">
+            <dxlc:LayoutItem HorizontalAlignment="Left" Label="Tlf. Fijo" Width="200" Margin="30,15,0,0">
+                <dxe:TextEdit x:Name="txtTlfFijo" Mask="f" MaskType="Numeric" MaskUseAsDisplayFormat="True"/>
+            </dxlc:LayoutItem>
+            <dxlc:LayoutItem HorizontalAlignment="Left" Label="Tlf. Móvil" Width="200" Margin="30,15,0,0">
+                <dxe:TextEdit x:Name="txtTlfMovil" Mask="f" MaskType="Numeric" MaskUseAsDisplayFormat="True"/>
+            </dxlc:LayoutItem>
+            <dxlc:LayoutItem HorizontalAlignment="Left" Label="Email" Width="200" Margin="30,15,0,0">
+                <dxe:TextEdit x:Name="txtEmail" Mask="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" MaskType="RegEx" />
+            </dxlc:LayoutItem>
+        </dxlc:LayoutGroup>
+
+    </Grid>
+</dx:ThemedWindow>

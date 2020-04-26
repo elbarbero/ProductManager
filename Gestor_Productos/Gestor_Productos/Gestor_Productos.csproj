@@ -156,6 +156,12 @@
     <Compile Include="Vistas\vLogin.xaml.cs">
       <DependentUpon>vLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\vMenu.xaml.cs">
+      <DependentUpon>vMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\vRegistroRecuperacion.xaml.cs">
+      <DependentUpon>vRegistroRecuperacion.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -192,6 +198,14 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Vistas\vLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\vMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\vRegistroRecuperacion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

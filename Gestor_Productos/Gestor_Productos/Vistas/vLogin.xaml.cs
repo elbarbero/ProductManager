@@ -11,7 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DevExpress.Data.Filtering;
 using DevExpress.Xpf.Core;
+using DevExpress.Xpf.Editors;
 using DevExpress.Xpo;
 using Gestor_Productos.Database;
 using Gestor_Productos.Database.ORM_GestProc;
@@ -53,7 +55,7 @@ namespace Gestor_Productos.Vistas
         {
             #region variables globales
             private vLogin ventana;
-            public UnitOfWork uow = new UnitOfWork();
+            public UnitOfWork uow;
 
             private string _usuario;
             public string usuario { get => _usuario; set { _usuario = value; OnPropertyChanged("usuario"); } }
@@ -72,6 +74,38 @@ namespace Gestor_Productos.Vistas
             public ViewModelvLogin(vLogin ventana)
             {
                 this.ventana = ventana;
+                uow = ConexionBBDD.getNewUnitOfWork();
+            }
+            #endregion
+
+            #region Eventos
+            public void btnSiguiente_Click(object sender, RoutedEventArgs e)
+            {
+                USUARIOS user = uow.FindObject<USUARIOS>(CriteriaOperator.Parse("Username = ? AND Password = ?", usuario, contrasena));
+                if (user != null)
+                {
+                    vMenu menu = new vMenu(user);
+                    menu.ShowDialog();
+                }
+                else
+                {
+                    ThemedMessageBox.Show("Inicio de Sesión", "Usuario y/o contraseña incorrectos", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+
+            public void RegistroRecuperacion_MouseUp(object sender, MouseButtonEventArgs e)
+            {
+                TextBlock textedit = sender as TextBlock;
+                if(textedit.Name == "btnRegistro")
+                {
+
+                }
+                else
+                {
+
+                }
+                vRegistroRecuperacion registroRec = new vRegistroRecuperacion();
+                registroRec.ShowDialog();
             }
             #endregion
 

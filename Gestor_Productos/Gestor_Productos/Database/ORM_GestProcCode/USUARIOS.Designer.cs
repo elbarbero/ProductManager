@@ -32,6 +32,13 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fNombre; }
             set { SetPropertyValue<string>(nameof(Nombre), ref fNombre, value); }
         }
+        string fApellidos;
+        [Size(150)]
+        public string Apellidos
+        {
+            get { return fApellidos; }
+            set { SetPropertyValue<string>(nameof(Apellidos), ref fApellidos, value); }
+        }
         string fUsername;
         public string Username
         {

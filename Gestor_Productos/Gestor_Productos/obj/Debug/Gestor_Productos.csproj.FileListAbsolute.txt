@@ -142,3 +142,8 @@ E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gest
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.exe
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.pdb
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.csprojAssemblyReference.cache
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vMenu.g.cs
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos_MarkupCompile.lref
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vMenu.baml
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vRegistroRecuperacion.g.cs
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vRegistroRecuperacion.baml
