@@ -119,6 +119,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Comun\ComunClass.cs" />
     <Compile Include="Database\ConexionBBDD.cs" />
     <Compile Include="Database\ORM_GestProcCode\CLIENTES.cs" />
     <Compile Include="Database\ORM_GestProcCode\CLIENTES.Designer.cs">
@@ -193,9 +194,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Comun\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Vistas\vLogin.xaml">
       <SubType>Designer</SubType>

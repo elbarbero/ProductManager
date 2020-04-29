@@ -15,6 +15,7 @@ using DevExpress.Data.Filtering;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.Editors;
 using DevExpress.Xpo;
+using Gestor_Productos.Comun;
 using Gestor_Productos.Database;
 using Gestor_Productos.Database.ORM_GestProc;
 
@@ -75,6 +76,11 @@ namespace Gestor_Productos.Vistas
             {
                 this.ventana = ventana;
                 uow = ConexionBBDD.getNewUnitOfWork();
+                /*USUARIOS u = uow.GetObjectByKey<USUARIOS>(1004);
+                string encriptado = ComunClass.Encriptar(u.Password);
+                Console.WriteLine(encriptado);
+                string desencriptado = ComunClass.DesEncriptar(encriptado);
+                Console.WriteLine(desencriptado);*/
             }
             #endregion
 
@@ -96,15 +102,16 @@ namespace Gestor_Productos.Vistas
             public void RegistroRecuperacion_MouseUp(object sender, MouseButtonEventArgs e)
             {
                 TextBlock textedit = sender as TextBlock;
+                string pulsado = "";
                 if(textedit.Name == "btnRegistro")
                 {
-
+                    pulsado = "registro";
                 }
                 else
                 {
-
+                    pulsado = "recuperar";
                 }
-                vRegistroRecuperacion registroRec = new vRegistroRecuperacion();
+                vRegistroRecuperacion registroRec = new vRegistroRecuperacion(pulsado);
                 registroRec.ShowDialog();
             }
             #endregion
