@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -57,6 +60,8 @@ namespace Gestor_Productos.Vistas
             #region variables globales
             private vLogin ventana;
             public UnitOfWork uow;
+            public bool _viewPass;
+            public bool viewPass { get => _viewPass; set { _viewPass = value; OnPropertyChanged("viewPass"); } }
 
             private string _usuario;
             public string usuario { get => _usuario; set { _usuario = value; OnPropertyChanged("usuario"); } }
@@ -76,6 +81,7 @@ namespace Gestor_Productos.Vistas
             {
                 this.ventana = ventana;
                 uow = ConexionBBDD.getNewUnitOfWork();
+                viewPass = true;
                 /*USUARIOS u = uow.GetObjectByKey<USUARIOS>(1004);
                 string encriptado = ComunClass.Encriptar(u.Password);
                 Console.WriteLine(encriptado);
@@ -87,10 +93,12 @@ namespace Gestor_Productos.Vistas
             #region Eventos
             public void btnSiguiente_Click(object sender, RoutedEventArgs e)
             {
-                USUARIOS user = uow.FindObject<USUARIOS>(CriteriaOperator.Parse("Username = ? AND Password = ?", usuario, contrasena));
-                if (user != null)
+                USUARIOS user = uow.FindObject<USUARIOS>(CriteriaOperator.Parse("Username = ?", usuario));
+
+                if (user != null && ComunClass.DesEncriptar(user.Password) == contrasena)
                 {
-                    vMenu menu = new vMenu(user);
+                    ventana.Visibility = Visibility.Collapsed;
+                    vMenu menu = new vMenu(user, ventana);
                     menu.ShowDialog();
                 }
                 else
@@ -113,6 +121,11 @@ namespace Gestor_Productos.Vistas
                 }
                 vRegistroRecuperacion registroRec = new vRegistroRecuperacion(pulsado);
                 registroRec.ShowDialog();
+            }
+
+            public void btnViewPassword_MouseDown(object sender, MouseButtonEventArgs e)
+            {
+                viewPass = viewPass ? false : true;
             }
             #endregion
 

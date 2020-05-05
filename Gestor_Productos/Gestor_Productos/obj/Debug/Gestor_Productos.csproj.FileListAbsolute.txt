@@ -133,8 +133,13 @@ E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\bin\Debug\ja\D
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\bin\Debug\ru\DevExpress.Xpf.DocumentViewer.v19.2.Core.resources.dll
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vLogin.baml
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vLogin.g.cs
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vMenu.g.cs
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vRegistroRecuperacion.g.cs
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\App.g.cs
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos_MarkupCompile.cache
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos_MarkupCompile.lref
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vMenu.baml
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vRegistroRecuperacion.baml
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.g.resources
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.Properties.Resources.resources
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.csproj.GenerateResource.cache
@@ -142,8 +147,3 @@ E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gest
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.exe
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.pdb
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.csprojAssemblyReference.cache
-E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vMenu.g.cs
-E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos_MarkupCompile.lref
-E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vMenu.baml
-E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vRegistroRecuperacion.g.cs
-E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vRegistroRecuperacion.baml

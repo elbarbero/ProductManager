@@ -24,12 +24,19 @@ namespace Gestor_Productos.Vistas
     public partial class vMenu : DevExpress.Xpf.Core.ThemedWindow
     {
         public static USUARIOS usuario;
-        public vMenu(USUARIOS user)
+        private vLogin viewLogin;
+        public vMenu(USUARIOS user, vLogin viewLogin)
         {
             InitializeComponent();
             usuario = user;
+            this.viewLogin = viewLogin;
             ViewModelvMenu viewModel = new ViewModelvMenu(this);
             DataContext = viewModel;
+        }
+
+        private void ThemedWindow_Closing(object sender, CancelEventArgs e)
+        {
+            viewLogin.Close();
         }
 
         public class ViewModelvMenu : INotifyPropertyChanged

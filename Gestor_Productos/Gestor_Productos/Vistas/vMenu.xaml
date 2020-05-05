@@ -1,11 +1,25 @@
-﻿<dx:ThemedWindow x:Class="Gestor_Productos.Vistas.vMenu" mc:Ignorable="d" Title="vMenu" Height="450" Width="800" 
+﻿<dx:ThemedWindow xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" x:Class="Gestor_Productos.Vistas.vMenu" mc:Ignorable="d" Title="Menu principal" Height="450" Width="800" 
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    xmlns:local="clr-namespace:Gestor_Productos.Vistas" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowBackButton="True">
+    xmlns:local="clr-namespace:Gestor_Productos.Vistas" WindowStartupLocation="CenterScreen"
+    Closing="ThemedWindow_Closing" WindowState="Maximized">
+    
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <dxr:RibbonControl Grid.ColumnSpan="2" RibbonStyle="Office2019" ToolbarShowMode="ShowAbove" />
+
+        <dxr:RibbonStatusBarControl Grid.ColumnSpan="2"/>
         
     </Grid>
 </dx:ThemedWindow>
