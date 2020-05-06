@@ -26,12 +26,12 @@
         <dxlc:LayoutGroup Grid.Row="1" Grid.ColumnSpan="2" Orientation="Vertical">
             <dxlc:LayoutItem Label="Inicio de sesión" HorizontalAlignment="Center" Margin="0,10,0,0" FontSize="18" FontWeight="Bold" Foreground="#073B3A"/>
             <dxlc:LayoutItem HorizontalAlignment="Center" Label="Usuario" LabelPosition="Top" Width="300" Margin="0,15,0,0">
-                <dxe:TextEdit x:Name="txtUsuario" EditValue="{DXBinding usuario, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <dxe:TextEdit x:Name="txtUsuario" EditValue="{DXBinding usuario, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TabIndex="1"/>
             </dxlc:LayoutItem>
             <dxlc:LayoutItem HorizontalAlignment="Center" Label="Contraseña" LabelPosition="Top" Margin="0,0,0,10">
                 <StackPanel Orientation="Horizontal">
-                    <dxe:PasswordBoxEdit x:Name="txtContrasena" Width="280" Visibility="{DXBinding viewPass ? `Visible` : `Collapsed`}" EditValue="{DXBinding contrasena, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{DXBinding 'usuario == null ? `False`: `True`'}"/>
-                    <dxe:TextEdit Width="280" EditValue="{Binding ElementName=txtContrasena, Path=Password}" Visibility="{DXBinding viewPass ? `Collapsed` : `Visible`}"/>
+                    <dxe:PasswordBoxEdit x:Name="txtContrasena" Width="280" TabIndex="2" Visibility="{DXBinding viewPass ? `Visible` : `Collapsed`}" EditValue="{DXBinding contrasena, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{DXBinding 'usuario == null ? `False`: `True`'}"/>
+                    <dxe:TextEdit Width="280" IsTabStop="False" EditValue="{Binding ElementName=txtContrasena, Path=Password}" Visibility="{DXBinding viewPass ? `Collapsed` : `Visible`}"/>
                     <dx:SimpleButton  x:Name="btnViewPassword" Width="20" VerticalAlignment="Stretch" Margin="2,0" Padding="5,2" IsEnabled="{DXBinding 'contrasena != null ? `True`: `False`'}" 
                                       Glyph="{dx:DXImage SvgImages/Dashboards/Zoom.svg}"
                                       PreviewMouseDown="{DXEvent 'btnViewPassword_MouseDown(@sender, @args)'}" PreviewMouseUp="{DXEvent 'btnViewPassword_MouseDown(@sender, @args)'}" BorderBrush="Transparent"/>

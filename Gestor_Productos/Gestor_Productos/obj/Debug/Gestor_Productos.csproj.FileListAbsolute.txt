@@ -147,3 +147,7 @@ E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gest
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.exe
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.pdb
 E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Gestor_Productos.csprojAssemblyReference.cache
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vProductos.g.cs
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\bin\Debug\DevExpress.Xpf.Accordion.v19.2.dll
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\bin\Debug\DevExpress.Xpf.Accordion.v19.2.xml
+E:\REPOSITORIOS\Product_Manager\Gestor_Productos\Gestor_Productos\obj\Debug\Vistas\vProductos.baml
