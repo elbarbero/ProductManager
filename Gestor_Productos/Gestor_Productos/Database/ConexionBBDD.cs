@@ -1,5 +1,7 @@
-﻿using DevExpress.Xpo;
+﻿using DevExpress.Xpf.Core;
+using DevExpress.Xpo;
 using DevExpress.Xpo.DB;
+using Gestor_Productos.Comun;
 using Gestor_Productos.Database.ORM_GestProc;
 using System;
 using System.Collections.Generic;
@@ -7,6 +9,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Gestor_Productos.Database
 {
@@ -14,8 +17,8 @@ namespace Gestor_Productos.Database
     {
         public static IDataLayer datalayer;
         public static UnitOfWork getNewUnitOfWork() => new UnitOfWork(datalayer);
-        
-        
+
+
         public static string CrearStringConexion(string direccionBBDD, string nombreDB, string usuarioBBDD, string passwordBBDD)
         {
             string sqlConn;
@@ -33,6 +36,25 @@ namespace Gestor_Productos.Database
             {
                 //Poner mensaje de error
                 return null;
+            }
+        }
+
+        public static void insertarDatosAdmin()
+        {
+            try
+            {
+                UnitOfWork uow = getNewUnitOfWork();
+                USUARIOS admin = new USUARIOS(uow);
+                admin.Nombre = "Administrador";
+                admin.Apellidos = "Admin";
+                admin.Email = "admin_BzzMag@gmail.com";
+                admin.Username = "admin";
+                admin.Password = ComunClass.Encriptar("1234");
+                uow.CommitChanges();
+            }
+            catch (Exception ex)
+            {
+                ThemedMessageBox.Show("Datos del administrador", "No se han podido insertarlos datos del administrador.", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

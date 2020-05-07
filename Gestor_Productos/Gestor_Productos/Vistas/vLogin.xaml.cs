@@ -37,22 +37,18 @@ namespace Gestor_Productos.Vistas
             {
                 IDataLayer datalayer = ConexionBBDD.CrearConexion(conexionString, DevExpress.Xpo.DB.AutoCreateOption.SchemaAlreadyExists);
                 ConexionBBDD.CrearDataBase(conexionString, DevExpress.Xpo.DB.AutoCreateOption.DatabaseAndSchema); //actualizamos la BBDD
-            }catch(Exception ex)
+                if (datalayer == null)
+                {
+                    datalayer = ConexionBBDD.CrearConexion(conexionString, DevExpress.Xpo.DB.AutoCreateOption.DatabaseAndSchema);
+                    ConexionBBDD.insertarDatosAdmin();
+                }
+            }
+            catch (Exception ex)
             {
                 IDataLayer datalayer = ConexionBBDD.CrearConexion(conexionString, DevExpress.Xpo.DB.AutoCreateOption.DatabaseAndSchema);
             }
             ViewModelvLogin viewModel = new ViewModelvLogin(this);
             DataContext = viewModel;
-
-            /*UnitOfWork uow = ConexionBBDD.getNewUnitOfWork();
-            XPCollection<USUARIOS> users = new XPCollection<USUARIOS>(uow);
-            USUARIOS u = new USUARIOS(uow);
-            u.Nombre = "hiuhihi";
-            u.Username = "pppppp";
-            uow.CommitChanges();
-
-            UnitOfWork uow2 = new UnitOfWork();
-            XPCollection<USUARIOS> users2 = new XPCollection<USUARIOS>(uow2);*/
         }
 
         public class ViewModelvLogin : INotifyPropertyChanged
@@ -82,11 +78,6 @@ namespace Gestor_Productos.Vistas
                 this.ventana = ventana;
                 uow = ConexionBBDD.getNewUnitOfWork();
                 viewPass = true;
-                /*USUARIOS u = uow.GetObjectByKey<USUARIOS>(1004);
-                string encriptado = ComunClass.Encriptar(u.Password);
-                Console.WriteLine(encriptado);
-                string desencriptado = ComunClass.DesEncriptar(encriptado);
-                Console.WriteLine(desencriptado);*/
             }
             #endregion
 
@@ -97,8 +88,11 @@ namespace Gestor_Productos.Vistas
 
                 if (user != null && ComunClass.DesEncriptar(user.Password) == contrasena)
                 {
-                    ventana.Visibility = Visibility.Collapsed;
-                    vMenu menu = new vMenu(user, ventana);
+                    //ventana.Visibility = Visibility.Collapsed;
+                    //usuario = null;
+                    //contrasena = null;
+                    vMenu menu = new vMenu(user);
+                    ventana.Close();
                     menu.ShowDialog();
                 }
                 else
@@ -111,7 +105,7 @@ namespace Gestor_Productos.Vistas
             {
                 TextBlock textedit = sender as TextBlock;
                 string pulsado = "";
-                if(textedit.Name == "btnRegistro")
+                if (textedit.Name == "btnRegistro")
                 {
                     pulsado = "registro";
                 }

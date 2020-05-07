@@ -1,4 +1,5 @@
-﻿using DevExpress.Xpf.Docking;
+﻿using DevExpress.Xpf.Accordion;
+using DevExpress.Xpf.Docking;
 using DevExpress.Xpo;
 using Gestor_Productos.Database;
 using Gestor_Productos.Database.ORM_GestProc;
@@ -25,13 +26,11 @@ namespace Gestor_Productos.Vistas
     public partial class vMenu : DevExpress.Xpf.Core.ThemedWindow
     {
         public static USUARIOS usuario;
-        private vLogin viewLogin;
-        public vMenu(USUARIOS user, vLogin viewLogin)
+        public vMenu(USUARIOS user)
         {
             InitializeComponent();
             usuario = user;
-            this.viewLogin = viewLogin;
-            ViewModelvMenu viewModel = new ViewModelvMenu(this, viewLogin);
+            ViewModelvMenu viewModel = new ViewModelvMenu(this);
             DataContext = viewModel;
 
             /*--DocumentPanel panel1 = dockLayoutManager1.DockController.AddDocumentPanel(documentGroup1, new Uri(@"Vistas\vProductos.xaml", UriKind.Relative));
@@ -54,16 +53,10 @@ namespace Gestor_Productos.Vistas
 
         }
 
-        private void ThemedWindow_Closing(object sender, CancelEventArgs e)
-        {
-            viewLogin.Close();
-        }
-
         public class ViewModelvMenu : INotifyPropertyChanged
         {
             #region variables globales
             private vMenu ventana;
-            private vLogin viewLogin;
             public UnitOfWork uow;
 
             public event PropertyChangedEventHandler PropertyChanged;
@@ -75,17 +68,16 @@ namespace Gestor_Productos.Vistas
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
             }
             //Constructor para visualizar albaranes
-            public ViewModelvMenu(vMenu ventana, vLogin viewLogin)
+            public ViewModelvMenu(vMenu ventana)
             {
                 this.ventana = ventana;
-                this.viewLogin = viewLogin;
                 uow = ConexionBBDD.getNewUnitOfWork();
             }
             #endregion
 
             #region Eventos
 
-            public void Productos_MouseUp(object sender, MouseButtonEventArgs e, DocumentGroup dg)
+            public void Materiales_MouseUp(object sender, MouseButtonEventArgs e, DocumentGroup dg)
             {
                 LayoutPanel panelInterfaz = new LayoutPanel
                 {
@@ -104,6 +96,21 @@ namespace Gestor_Productos.Vistas
 
             }
 
+            public void Proveedores_MouseUp(object sender, MouseButtonEventArgs e)
+            {
+
+            }
+
+            public void Colmenas_MouseUp(object sender, MouseButtonEventArgs e)
+            {
+
+            }
+
+            public void Cosechas_MouseUp(object sender, MouseButtonEventArgs e)
+            {
+
+            }
+
             public void Configuracion_MouseUp(object sender, MouseButtonEventArgs e)
             {
 
@@ -111,7 +118,11 @@ namespace Gestor_Productos.Vistas
 
             public void CerrarSesion_MouseUp(object sender, MouseButtonEventArgs e)
             {
-                viewLogin.Visibility = Visibility.Visible;
+                vLogin vlogin = new vLogin();
+                ventana.Close();
+                vlogin.ShowDialog();
+                //viewLogin.Visibility = Visibility.Visible;
+                //ventana.Close();
             }
 
             #endregion

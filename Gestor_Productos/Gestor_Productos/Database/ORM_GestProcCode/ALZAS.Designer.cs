@@ -16,7 +16,7 @@ using System.Reflection;
 namespace Gestor_Productos.Database.ORM_GestProc
 {
 
-    public partial class CLIENTES : XPBaseObject
+    public partial class ALZAS : XPBaseObject
     {
         int fId;
         [Key(true)]
@@ -31,39 +31,32 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fNombre; }
             set { SetPropertyValue<string>(nameof(Nombre), ref fNombre, value); }
         }
-        string fApellidos;
-        [Size(150)]
-        public string Apellidos
+        COLMENAS fColmena;
+        [Association(@"ALZASReferencesCOLMENAS")]
+        public COLMENAS Colmena
         {
-            get { return fApellidos; }
-            set { SetPropertyValue<string>(nameof(Apellidos), ref fApellidos, value); }
+            get { return fColmena; }
+            set { SetPropertyValue<COLMENAS>(nameof(Colmena), ref fColmena, value); }
         }
-        string fDNI;
-        [Size(12)]
-        public string DNI
+        decimal fAlto;
+        [DbType("decimal(4,2)")]
+        public decimal Alto
         {
-            get { return fDNI; }
-            set { SetPropertyValue<string>(nameof(DNI), ref fDNI, value); }
+            get { return fAlto; }
+            set { SetPropertyValue<decimal>(nameof(Alto), ref fAlto, value); }
         }
-        string fTlfFijo;
-        [Size(9)]
-        public string TlfFijo
+        decimal fAncho;
+        [DbType("decimal(4,2)")]
+        public decimal Ancho
         {
-            get { return fTlfFijo; }
-            set { SetPropertyValue<string>(nameof(TlfFijo), ref fTlfFijo, value); }
+            get { return fAncho; }
+            set { SetPropertyValue<decimal>(nameof(Ancho), ref fAncho, value); }
         }
-        string fTlfMovil;
-        [Size(9)]
-        public string TlfMovil
+        string fEstado;
+        public string Estado
         {
-            get { return fTlfMovil; }
-            set { SetPropertyValue<string>(nameof(TlfMovil), ref fTlfMovil, value); }
-        }
-        string fEmail;
-        public string Email
-        {
-            get { return fEmail; }
-            set { SetPropertyValue<string>(nameof(Email), ref fEmail, value); }
+            get { return fEstado; }
+            set { SetPropertyValue<string>(nameof(Estado), ref fEstado, value); }
         }
         string fDescripcion;
         public string Descripcion
@@ -71,8 +64,6 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fDescripcion; }
             set { SetPropertyValue<string>(nameof(Descripcion), ref fDescripcion, value); }
         }
-        [Association(@"VENTASReferencesCLIENTES")]
-        public XPCollection<VENTAS> VENTASCollection { get { return GetCollection<VENTAS>(nameof(VENTASCollection)); } }
     }
 
 }

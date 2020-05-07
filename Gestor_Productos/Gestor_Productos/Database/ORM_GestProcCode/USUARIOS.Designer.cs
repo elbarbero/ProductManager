@@ -79,7 +79,7 @@ namespace Gestor_Productos.Database.ORM_GestProc
             set { SetPropertyValue<string>(nameof(Email), ref fEmail, value); }
         }
         [Association(@"USUARIOSReferencesPRODUCTOS")]
-        public XPCollection<PRODUCTOS> PRODUCTOSCollection { get { return GetCollection<PRODUCTOS>(nameof(PRODUCTOSCollection)); } }
+        public XPCollection<MATERIALES> PRODUCTOSCollection { get { return GetCollection<MATERIALES>(nameof(PRODUCTOSCollection)); } }
         [Association(@"CONFIGURACIONReferencesUSUARIOS")]
         public XPCollection<CONFIGURACION> CONFIGURACIONs { get { return GetCollection<CONFIGURACION>(nameof(CONFIGURACIONs)); } }
     }

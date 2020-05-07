@@ -8,9 +8,9 @@ using System.Reflection;
 namespace Gestor_Productos.Database.ORM_GestProc
 {
 
-    public partial class FAMILIAS
+    public partial class PROVEEDORES
     {
-        public FAMILIAS(Session session) : base(session) { }
+        public PROVEEDORES(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

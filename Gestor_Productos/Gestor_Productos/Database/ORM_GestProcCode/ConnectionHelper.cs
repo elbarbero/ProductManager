@@ -19,13 +19,21 @@ namespace Gestor_Productos.Database.ORM_GestProc
     {
         static Type[] persistentTypes = new Type[] {
             typeof(USUARIOS),
-            typeof(PRODUCTOS),
+            typeof(MATERIALES),
             typeof(MARCAS),
-            typeof(FAMILIAS),
             typeof(CLIENTES),
             typeof(CONFIGURACION),
             typeof(COMPRAS),
-            typeof(VENTAS)
+            typeof(VENTAS),
+            typeof(COLMENAS),
+            typeof(CUADROS),
+            typeof(ALZAS),
+            typeof(PROVEEDORES),
+            typeof(IMPUESTOS),
+            typeof(MIEL),
+            typeof(LINEAS_COMPRAS),
+            typeof(LINEAS_VENTAS),
+            typeof(COSECHAS)
         };
         public static Type[] GetPersistentTypes()
         {
@@ -33,7 +41,7 @@ namespace Gestor_Productos.Database.ORM_GestProc
             Array.Copy(persistentTypes, copy, persistentTypes.Length);
             return copy;
         }
-        public static string ConnectionString { get { return System.Configuration.ConfigurationManager.ConnectionStrings["localhost_BP_GestProd"].ConnectionString; } }
+        public static string ConnectionString { get { return System.Configuration.ConfigurationManager.ConnectionStrings["DB_GESTPROD"].ConnectionString; } }
         public static void Connect(DevExpress.Xpo.DB.AutoCreateOption autoCreateOption, bool threadSafe = false)
         {
             if (threadSafe)

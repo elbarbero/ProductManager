@@ -41,7 +41,7 @@
         </dxlc:LayoutGroup>
 
         <dxlc:LayoutGroup Grid.Row="2" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalAlignment="Center">
-            <dx:SimpleButton x:Name="btnSiguiente" Content="Siguiente" Width="150" IsEnabled="{DXBinding Expr= 'contrasena != null and contrasena.Length > 4? `True` : `False`', FallbackValue='False'}" Click="{DXEvent 'btnSiguiente_Click(@sender, @args)'}"/>
+            <dx:SimpleButton x:Name="btnSiguiente" Content="Siguiente" Width="150" IsEnabled="{DXBinding Expr= 'contrasena != null and contrasena.Length >= 4? `True` : `False`', FallbackValue='False'}" Click="{DXEvent 'btnSiguiente_Click(@sender, @args)'}"/>
         </dxlc:LayoutGroup>
 
         <TextBlock x:Name="btnRegistro" Grid.Row="3" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,15" Foreground="#D5DE40" FontSize="13" FontWeight="Bold" Text="Registrarse" TextDecorations="Underline" Cursor="Hand" MouseUp="{DXEvent 'RegistroRecuperacion_MouseUp(@sender, @args)'}"/>

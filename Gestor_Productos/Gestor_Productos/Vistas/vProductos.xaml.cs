@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DevExpress.Xpo;
+using Gestor_Productos.Database;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +27,32 @@ namespace Gestor_Productos.Vistas
         {
             InitializeComponent();
             MessageBox.Show("JHhkjh", prueba);
+            ViewModelvProductos viewModel = new ViewModelvProductos(this);
+            DataContext = viewModel;
+        }
+
+        public class ViewModelvProductos : INotifyPropertyChanged
+        {
+            #region variables globales
+            private vProductos ventana;
+            private vLogin viewLogin;
+            public UnitOfWork uow;
+
+            public event PropertyChangedEventHandler PropertyChanged;
+            #endregion
+
+            #region Constructor
+            protected void OnPropertyChanged(string name)
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+            }
+            //Constructor para visualizar albaranes
+            public ViewModelvProductos(vProductos ventana)
+            {
+                this.ventana = ventana;
+                uow = ConexionBBDD.getNewUnitOfWork();
+            }
+            #endregion
         }
     }
 }

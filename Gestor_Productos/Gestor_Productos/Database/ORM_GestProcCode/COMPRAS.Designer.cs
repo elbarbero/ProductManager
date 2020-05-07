@@ -25,6 +25,61 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fId; }
             set { SetPropertyValue<long>(nameof(Id), ref fId, value); }
         }
+        PROVEEDORES fProveedor;
+        [Association(@"COMPRASReferencesPROVEEDORES")]
+        public PROVEEDORES Proveedor
+        {
+            get { return fProveedor; }
+            set { SetPropertyValue<PROVEEDORES>(nameof(Proveedor), ref fProveedor, value); }
+        }
+        DateTime fFechaCompra;
+        public DateTime FechaCompra
+        {
+            get { return fFechaCompra; }
+            set { SetPropertyValue<DateTime>(nameof(FechaCompra), ref fFechaCompra, value); }
+        }
+        string fFechaEntrega;
+        public string FechaEntrega
+        {
+            get { return fFechaEntrega; }
+            set { SetPropertyValue<string>(nameof(FechaEntrega), ref fFechaEntrega, value); }
+        }
+        decimal fTotalBruto;
+        [DbType("decimal(10,4)")]
+        public decimal TotalBruto
+        {
+            get { return fTotalBruto; }
+            set { SetPropertyValue<decimal>(nameof(TotalBruto), ref fTotalBruto, value); }
+        }
+        decimal fTotalDtos;
+        [DbType("decimal(10,4)")]
+        public decimal TotalDtos
+        {
+            get { return fTotalDtos; }
+            set { SetPropertyValue<decimal>(nameof(TotalDtos), ref fTotalDtos, value); }
+        }
+        decimal fTotalImpuestos;
+        [DbType("decimal(10,4)")]
+        public decimal TotalImpuestos
+        {
+            get { return fTotalImpuestos; }
+            set { SetPropertyValue<decimal>(nameof(TotalImpuestos), ref fTotalImpuestos, value); }
+        }
+        decimal fTotalNeto;
+        [DbType("decimal(10,4)")]
+        public decimal TotalNeto
+        {
+            get { return fTotalNeto; }
+            set { SetPropertyValue<decimal>(nameof(TotalNeto), ref fTotalNeto, value); }
+        }
+        string fDescripcion;
+        public string Descripcion
+        {
+            get { return fDescripcion; }
+            set { SetPropertyValue<string>(nameof(Descripcion), ref fDescripcion, value); }
+        }
+        [Association(@"LINEAS_COMPRASReferencesCOMPRAS")]
+        public XPCollection<LINEAS_COMPRAS> LINEAS_COMPRASs { get { return GetCollection<LINEAS_COMPRAS>(nameof(LINEAS_COMPRASs)); } }
     }
 
 }

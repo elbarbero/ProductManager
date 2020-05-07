@@ -16,7 +16,7 @@ using System.Reflection;
 namespace Gestor_Productos.Database.ORM_GestProc
 {
 
-    public partial class MARCAS : XPBaseObject
+    public partial class IMPUESTOS : XPBaseObject
     {
         int fId;
         [Key(true)]
@@ -31,8 +31,26 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fNombre; }
             set { SetPropertyValue<string>(nameof(Nombre), ref fNombre, value); }
         }
-        [Association(@"MATERIALESReferencesMARCAS")]
+        decimal fValor;
+        [DbType("decimal(5,2)")]
+        public decimal Valor
+        {
+            get { return fValor; }
+            set { SetPropertyValue<decimal>(nameof(Valor), ref fValor, value); }
+        }
+        decimal fValorRecargo;
+        [DbType("decimal(5,2)")]
+        public decimal ValorRecargo
+        {
+            get { return fValorRecargo; }
+            set { SetPropertyValue<decimal>(nameof(ValorRecargo), ref fValorRecargo, value); }
+        }
+        [Association(@"MATERIALESReferencesIMPUESTOS")]
         public XPCollection<MATERIALES> MATERIALESCollection { get { return GetCollection<MATERIALES>(nameof(MATERIALESCollection)); } }
+        [Association(@"LINEAS_COMPRASReferencesIMPUESTOS")]
+        public XPCollection<LINEAS_COMPRAS> LINEAS_COMPRASs { get { return GetCollection<LINEAS_COMPRAS>(nameof(LINEAS_COMPRASs)); } }
+        [Association(@"LINEAS_VENTASReferencesIMPUESTOS")]
+        public XPCollection<LINEAS_VENTAS> LINEAS_VENTASs { get { return GetCollection<LINEAS_VENTAS>(nameof(LINEAS_VENTASs)); } }
     }
 
 }

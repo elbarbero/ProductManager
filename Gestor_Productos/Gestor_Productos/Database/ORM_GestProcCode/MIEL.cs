@@ -8,9 +8,9 @@ using System.Reflection;
 namespace Gestor_Productos.Database.ORM_GestProc
 {
 
-    public partial class PRODUCTOS
+    public partial class MIEL
     {
-        public PRODUCTOS(Session session) : base(session) { }
+        public MIEL(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

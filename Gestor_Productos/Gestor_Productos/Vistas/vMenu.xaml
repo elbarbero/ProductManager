@@ -5,8 +5,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:local="clr-namespace:Gestor_Productos.Vistas"
-                 xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" WindowStartupLocation="CenterScreen"
-    Closing="ThemedWindow_Closing" WindowState="Maximized">
+    xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" WindowStartupLocation="CenterScreen"
+    WindowState="Maximized">
     
     <Grid>
         <Grid.RowDefinitions>
@@ -19,8 +19,11 @@
         </Grid.ColumnDefinitions>
 
         <dxa:AccordionControl >
-            <dxa:AccordionItem x:Name="btnProductos" Header="Productos" GlyphPosition="Left" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Product_Group.svg}" MouseUp="{DXEvent 'Productos_MouseUp(@sender, @args, @ElementName(documentGroup1))'}"/>
+            <dxa:AccordionItem x:Name="btnMateriales" Header="Materiales" GlyphPosition="Left" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Product_Group.svg}" MouseUp="{DXEvent 'Materiales_MouseUp(@sender, @args, @ElementName(documentGroup1))'}"/>
             <dxa:AccordionItem x:Name="btnClientes" Header="Clientes" GlyphPosition="Left" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Customer.svg}" MouseUp="{DXEvent 'Clientes_MouseUp(@sender, @args)'}"/>
+            <dxa:AccordionItem x:Name="btnProveedores" Header="Proveedores" GlyphPosition="Left" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Person.svg}" MouseUp="{DXEvent 'Proveedores_MouseUp(@sender, @args)'}"/>
+            <dxa:AccordionItem x:Name="btnColmenas" Header="Colmenas" GlyphPosition="Left" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Product.svg}" MouseUp="{DXEvent 'Colmenas_MouseUp(@sender, @args)'}"/>
+            <dxa:AccordionItem x:Name="btnCosechas" Header="Cosechas" GlyphPosition="Left" Glyph="{dx:DXImage SvgImages/Dashboards/Grid.svg}" MouseUp="{DXEvent 'Cosechas_MouseUp(@sender, @args)'}"/>
             <dxa:AccordionItem x:Name="btnConfiguracion" Header="Configuración" GlyphPosition="Left" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Unknown.svg}" MouseUp="{DXEvent 'Configuracion_MouseUp(@sender, @args)'}"/>
             <dxa:AccordionItem x:Name="btnCerrarSesion" Header="Cerrar sesión" GlyphPosition="Left" Glyph="{dx:DXImage SvgImages/XAF/Action_Exit.svg}" MouseUp="{DXEvent 'CerrarSesion_MouseUp(@sender, @args)'}" />
         </dxa:AccordionControl>

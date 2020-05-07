@@ -16,7 +16,7 @@ using System.Reflection;
 namespace Gestor_Productos.Database.ORM_GestProc
 {
 
-    public partial class FAMILIAS : XPBaseObject
+    public partial class COSECHAS : XPBaseObject
     {
         int fId;
         [Key(true)]
@@ -31,8 +31,27 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fNombre; }
             set { SetPropertyValue<string>(nameof(Nombre), ref fNombre, value); }
         }
-        [Association(@"PRODUCTOSReferencesFAMILIAS")]
-        public XPCollection<PRODUCTOS> PRODUCTOSCollection { get { return GetCollection<PRODUCTOS>(nameof(PRODUCTOSCollection)); } }
+        DateTime fFechaCosecha;
+        public DateTime FechaCosecha
+        {
+            get { return fFechaCosecha; }
+            set { SetPropertyValue<DateTime>(nameof(FechaCosecha), ref fFechaCosecha, value); }
+        }
+        DateTime fFechaVendidoTodo;
+        public DateTime FechaVendidoTodo
+        {
+            get { return fFechaVendidoTodo; }
+            set { SetPropertyValue<DateTime>(nameof(FechaVendidoTodo), ref fFechaVendidoTodo, value); }
+        }
+        decimal fCantidadSacada;
+        [DbType("decimal(10,4)")]
+        public decimal CantidadSacada
+        {
+            get { return fCantidadSacada; }
+            set { SetPropertyValue<decimal>(nameof(CantidadSacada), ref fCantidadSacada, value); }
+        }
+        [Association(@"MIELReferencesCOSECHAS")]
+        public XPCollection<MIEL> MIELs { get { return GetCollection<MIEL>(nameof(MIELs)); } }
     }
 
 }

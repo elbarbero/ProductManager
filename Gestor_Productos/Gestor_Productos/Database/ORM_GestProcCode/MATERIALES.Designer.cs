@@ -16,7 +16,7 @@ using System.Reflection;
 namespace Gestor_Productos.Database.ORM_GestProc
 {
 
-    public partial class PRODUCTOS : XPBaseObject
+    public partial class MATERIALES : XPBaseObject
     {
         string fId;
         [Key]
@@ -31,19 +31,19 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fNombre; }
             set { SetPropertyValue<string>(nameof(Nombre), ref fNombre, value); }
         }
-        FAMILIAS fFamilia;
-        [Association(@"PRODUCTOSReferencesFAMILIAS")]
-        public FAMILIAS Familia
-        {
-            get { return fFamilia; }
-            set { SetPropertyValue<FAMILIAS>(nameof(Familia), ref fFamilia, value); }
-        }
         MARCAS fMarca;
-        [Association(@"PRODUCTOSReferencesMARCAS")]
+        [Association(@"MATERIALESReferencesMARCAS")]
         public MARCAS Marca
         {
             get { return fMarca; }
             set { SetPropertyValue<MARCAS>(nameof(Marca), ref fMarca, value); }
+        }
+        IMPUESTOS fImpuesto;
+        [Association(@"MATERIALESReferencesIMPUESTOS")]
+        public IMPUESTOS Impuesto
+        {
+            get { return fImpuesto; }
+            set { SetPropertyValue<IMPUESTOS>(nameof(Impuesto), ref fImpuesto, value); }
         }
         string fDescripcion;
         public string Descripcion
@@ -86,8 +86,16 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fPrecioCompra; }
             set { SetPropertyValue<decimal>(nameof(PrecioCompra), ref fPrecioCompra, value); }
         }
+        string fDescripcion1;
+        public string Descripcion1
+        {
+            get { return fDescripcion1; }
+            set { SetPropertyValue<string>(nameof(Descripcion1), ref fDescripcion1, value); }
+        }
         [Association(@"USUARIOSReferencesPRODUCTOS")]
         public XPCollection<USUARIOS> USUARIOSCollection { get { return GetCollection<USUARIOS>(nameof(USUARIOSCollection)); } }
+        [Association(@"LINEAS_COMPRASReferencesMATERIALES")]
+        public XPCollection<LINEAS_COMPRAS> LINEAS_COMPRASs { get { return GetCollection<LINEAS_COMPRAS>(nameof(LINEAS_COMPRASs)); } }
     }
 
 }

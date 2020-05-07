@@ -130,9 +130,17 @@
     </Compile>
     <Compile Include="Comun\ComunClass.cs" />
     <Compile Include="Database\ConexionBBDD.cs" />
+    <Compile Include="Database\ORM_GestProcCode\ALZAS.cs" />
+    <Compile Include="Database\ORM_GestProcCode\ALZAS.Designer.cs">
+      <DependentUpon>ALZAS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\ORM_GestProcCode\CLIENTES.cs" />
     <Compile Include="Database\ORM_GestProcCode\CLIENTES.Designer.cs">
       <DependentUpon>CLIENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORM_GestProcCode\COLMENAS.cs" />
+    <Compile Include="Database\ORM_GestProcCode\COLMENAS.Designer.cs">
+      <DependentUpon>COLMENAS.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\ORM_GestProcCode\COMPRAS.cs" />
     <Compile Include="Database\ORM_GestProcCode\COMPRAS.Designer.cs">
@@ -143,17 +151,41 @@
       <DependentUpon>CONFIGURACION.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\ORM_GestProcCode\ConnectionHelper.cs" />
-    <Compile Include="Database\ORM_GestProcCode\FAMILIAS.cs" />
-    <Compile Include="Database\ORM_GestProcCode\FAMILIAS.Designer.cs">
-      <DependentUpon>FAMILIAS.cs</DependentUpon>
+    <Compile Include="Database\ORM_GestProcCode\COSECHAS.cs" />
+    <Compile Include="Database\ORM_GestProcCode\COSECHAS.Designer.cs">
+      <DependentUpon>COSECHAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORM_GestProcCode\CUADROS.cs" />
+    <Compile Include="Database\ORM_GestProcCode\CUADROS.Designer.cs">
+      <DependentUpon>CUADROS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORM_GestProcCode\IMPUESTOS.cs" />
+    <Compile Include="Database\ORM_GestProcCode\IMPUESTOS.Designer.cs">
+      <DependentUpon>IMPUESTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORM_GestProcCode\LINEAS_COMPRAS.cs" />
+    <Compile Include="Database\ORM_GestProcCode\LINEAS_COMPRAS.Designer.cs">
+      <DependentUpon>LINEAS_COMPRAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORM_GestProcCode\LINEAS_VENTAS.cs" />
+    <Compile Include="Database\ORM_GestProcCode\LINEAS_VENTAS.Designer.cs">
+      <DependentUpon>LINEAS_VENTAS.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\ORM_GestProcCode\MARCAS.cs" />
     <Compile Include="Database\ORM_GestProcCode\MARCAS.Designer.cs">
       <DependentUpon>MARCAS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database\ORM_GestProcCode\PRODUCTOS.cs" />
-    <Compile Include="Database\ORM_GestProcCode\PRODUCTOS.Designer.cs">
-      <DependentUpon>PRODUCTOS.cs</DependentUpon>
+    <Compile Include="Database\ORM_GestProcCode\MATERIALES.cs" />
+    <Compile Include="Database\ORM_GestProcCode\MATERIALES.Designer.cs">
+      <DependentUpon>MATERIALES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORM_GestProcCode\MIEL.cs" />
+    <Compile Include="Database\ORM_GestProcCode\MIEL.Designer.cs">
+      <DependentUpon>MIEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ORM_GestProcCode\PROVEEDORES.cs" />
+    <Compile Include="Database\ORM_GestProcCode\PROVEEDORES.Designer.cs">
+      <DependentUpon>PROVEEDORES.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\ORM_GestProcCode\USUARIOS.cs" />
     <Compile Include="Database\ORM_GestProcCode\USUARIOS.Designer.cs">

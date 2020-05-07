@@ -16,7 +16,7 @@ using System.Reflection;
 namespace Gestor_Productos.Database.ORM_GestProc
 {
 
-    public partial class CLIENTES : XPBaseObject
+    public partial class PROVEEDORES : XPBaseObject
     {
         int fId;
         [Key(true)]
@@ -31,19 +31,12 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fNombre; }
             set { SetPropertyValue<string>(nameof(Nombre), ref fNombre, value); }
         }
-        string fApellidos;
-        [Size(150)]
-        public string Apellidos
-        {
-            get { return fApellidos; }
-            set { SetPropertyValue<string>(nameof(Apellidos), ref fApellidos, value); }
-        }
-        string fDNI;
+        string fCIF;
         [Size(12)]
-        public string DNI
+        public string CIF
         {
-            get { return fDNI; }
-            set { SetPropertyValue<string>(nameof(DNI), ref fDNI, value); }
+            get { return fCIF; }
+            set { SetPropertyValue<string>(nameof(CIF), ref fCIF, value); }
         }
         string fTlfFijo;
         [Size(9)]
@@ -65,14 +58,21 @@ namespace Gestor_Productos.Database.ORM_GestProc
             get { return fEmail; }
             set { SetPropertyValue<string>(nameof(Email), ref fEmail, value); }
         }
+        string fNombreComercial;
+        [Size(200)]
+        public string NombreComercial
+        {
+            get { return fNombreComercial; }
+            set { SetPropertyValue<string>(nameof(NombreComercial), ref fNombreComercial, value); }
+        }
         string fDescripcion;
         public string Descripcion
         {
             get { return fDescripcion; }
             set { SetPropertyValue<string>(nameof(Descripcion), ref fDescripcion, value); }
         }
-        [Association(@"VENTASReferencesCLIENTES")]
-        public XPCollection<VENTAS> VENTASCollection { get { return GetCollection<VENTAS>(nameof(VENTASCollection)); } }
+        [Association(@"COMPRASReferencesPROVEEDORES")]
+        public XPCollection<COMPRAS> COMPRASCollection { get { return GetCollection<COMPRAS>(nameof(COMPRASCollection)); } }
     }
 
 }
